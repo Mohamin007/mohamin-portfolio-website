@@ -6,7 +6,7 @@ import cosmicFigure from '@/assets/cosmic-entity.png';
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ backgroundColor: '#000000' }}>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden hero-force-dark" style={{ backgroundColor: '#000000' }}>
       {/* Watermark Background Text */}
       <div className="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none">
         <WatermarkDust />
@@ -32,10 +32,10 @@ export const HeroSection = () => {
               />
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#projects" className="btn-cosmic text-center">
+              <a href="#projects" className="hero-btn text-center">
                 View My Work
               </a>
-              <a href="#contact" className="btn-cosmic text-center">
+              <a href="#contact" className="hero-btn text-center">
                 Let's Connect
               </a>
             </div>
