@@ -57,7 +57,7 @@ export const HeroSection = () => {
                 width: 'auto',
                 maxWidth: 'none',
                 mixBlendMode: 'screen',
-                filter: 'brightness(1.4) contrast(1.3) saturate(1.1) drop-shadow(0 0 8px rgba(255,255,255,0.6))',
+                filter: 'brightness(1.4) contrast(1.5) saturate(1.1) drop-shadow(0 0 15px rgba(255,255,255,0.9)) drop-shadow(0 0 30px rgba(255,255,255,0.6))',
               }}
             />
           </motion.div>
