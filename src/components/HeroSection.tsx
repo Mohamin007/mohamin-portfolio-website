@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { TypewriterText } from './TypewriterText';
+import { CosmicDust } from './CosmicDust';
 import cosmicFigure from '@/assets/cosmic-entity.png';
 
 export const HeroSection = () => {
@@ -46,6 +47,7 @@ export const HeroSection = () => {
             className="relative flex justify-center items-center overflow-visible"
             style={{ height: '100vh' }}
           >
+            <CosmicDust />
             <img
               src={cosmicFigure}
               alt="Cosmic Entity"
@@ -55,6 +57,7 @@ export const HeroSection = () => {
                 width: 'auto',
                 maxWidth: 'none',
                 mixBlendMode: 'screen',
+                filter: 'brightness(1.3) contrast(1.2) saturate(1.1)',
               }}
             />
           </motion.div>
