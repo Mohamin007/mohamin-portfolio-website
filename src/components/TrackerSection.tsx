@@ -1,44 +1,13 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Lock, Zap } from 'lucide-react';
+import { Lock, Code, Award, FileText, Swords } from 'lucide-react';
 
-const years = [
-  {
-    year: 'Year 1',
-    title: 'Foundation',
-    items: ['Python mastery', 'Git', 'CS50P'],
-    progress: 40,
-    active: true,
-  },
-  {
-    year: 'Year 2',
-    title: 'Data Fundamentals',
-    items: ['SQL', 'NumPy', 'Pandas', 'Kaggle', 'First internship'],
-    progress: 0,
-    active: false,
-  },
-  {
-    year: 'Year 3',
-    title: 'Machine Learning',
-    items: ['Andrew Ng ML Specialization', 'AWS'],
-    progress: 0,
-    active: false,
-  },
-  {
-    year: 'Year 4',
-    title: 'Advanced AI',
-    items: ['LLM/GenAI', 'FastAPI', 'Docker', 'Streamlit'],
-    progress: 0,
-    active: false,
-  },
-  {
-    year: 'Year 5',
-    title: 'Launch',
-    items: ['Thesis', 'Job applications'],
-    progress: 0,
-    active: false,
-  },
+const stats = [
+  { number: '20+', label: 'C Projects Built', icon: Code },
+  { number: '3', label: 'Languages in Arsenal', sublabel: 'C (Mastered) · R (Mastered) · Python (In Progress)', icon: Swords },
+  { number: '177', label: 'C Programming Files Written', icon: FileText },
+  { number: '2', label: 'Certifications Earned', icon: Award },
 ];
 
 export const TrackerSection = () => {
@@ -52,71 +21,96 @@ export const TrackerSection = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-6"
         >
-          <span className="section-label mb-4 block">Mission Board</span>
+          <span className="section-label mb-4 block">Mission Log</span>
           <h2 className="text-4xl md:text-5xl font-heading font-bold glow-text-subtle">
-            ML Study Tracker
+            The Journey So Far
           </h2>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto space-y-6">
-          {years.map((year, index) => (
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-center text-muted-foreground mb-16 text-sm md:text-base"
+        >
+          From June 2025 to now (March 2026) — built in just a few months.
+        </motion.p>
+
+        {/* Stats Grid */}
+        <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+          {stats.map((stat, index) => (
             <motion.div
-              key={year.year}
-              initial={{ opacity: 0, x: -30 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-              className={`glass-card p-6 ${
-                year.active
-                  ? 'border-foreground/30'
-                  : 'opacity-50 border-muted-foreground/10'
-              }`}
+              key={stat.label}
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+              className="glass-card p-6 text-center group hover:border-foreground/30 transition-all duration-500"
             >
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-3">
-                  {year.active ? (
-                    <Zap className="w-5 h-5 text-foreground animate-pulse" />
-                  ) : (
-                    <Lock className="w-5 h-5 text-muted-foreground/50" />
-                  )}
-                  <span className="font-heading font-bold text-lg">{year.year}</span>
-                  <span className="text-muted-foreground text-sm">— {year.title}</span>
-                  {year.active && (
-                    <span className="text-xs bg-foreground/10 px-2 py-1 rounded-full border border-foreground/20">
-                      ACTIVE
-                    </span>
-                  )}
-                </div>
-                <span className="text-sm text-muted-foreground">{year.progress}%</span>
+              <stat.icon className="w-5 h-5 mx-auto mb-3 text-muted-foreground group-hover:text-foreground transition-colors" />
+              <div className="text-3xl md:text-4xl font-heading font-bold glow-text-subtle mb-2">
+                {stat.number}
               </div>
-
-              <div className="progress-bar-cosmic mb-4">
-                <motion.div
-                  className="progress-bar-fill"
-                  initial={{ width: 0 }}
-                  animate={isInView ? { width: `${year.progress}%` } : {}}
-                  transition={{ duration: 1, delay: 0.5 + index * 0.1 }}
-                />
-              </div>
-
-              <div className="flex flex-wrap gap-2">
-                {year.items.map((item) => (
-                  <span
-                    key={item}
-                    className={`text-xs px-3 py-1 rounded-full ${
-                      year.active
-                        ? 'bg-foreground/10 text-foreground/80'
-                        : 'bg-muted text-muted-foreground/50'
-                    }`}
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
+              <div className="text-sm text-muted-foreground font-medium">{stat.label}</div>
+              {stat.sublabel && (
+                <div className="text-xs text-muted-foreground/60 mt-1">{stat.sublabel}</div>
+              )}
             </motion.div>
           ))}
         </div>
+
+        {/* Cards */}
+        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6 mb-12">
+          {/* GirlScript Card */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.7 }}
+            className="glass-card-glow p-6"
+          >
+            <h3 className="font-heading font-bold text-lg glow-text-subtle mb-3">
+              GirlScript Summer of Code 2025
+            </h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Selected as contributor, led a small team, chose and contributed to multiple open source projects remotely. Collaborated with developers across India to build and improve real-world applications.
+            </p>
+          </motion.div>
+
+          {/* Python Journey Card - Locked */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="glass-card p-6 relative overflow-hidden"
+          >
+            {/* Blurred content */}
+            <div className="blur-sm select-none pointer-events-none">
+              <h3 className="font-heading font-bold text-lg mb-3">Python Journey</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Python projects, builds and achievements loading...
+              </p>
+            </div>
+
+            {/* Locked overlay */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center bg-background/40 backdrop-blur-[2px]">
+              <Lock className="w-6 h-6 text-muted-foreground/60 mb-3" />
+              <span className="text-xs font-heading font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full border border-foreground/20 bg-foreground/5 glow-text-subtle animate-pulse-glow">
+                Coming Soon
+              </span>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Bottom line */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.8, delay: 1 }}
+          className="text-center text-muted-foreground/60 italic text-sm"
+        >
+          This is just the beginning. More coming soon.
+        </motion.p>
       </div>
     </section>
   );
