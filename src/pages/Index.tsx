@@ -7,6 +7,7 @@ import { TrackerSection } from '@/components/TrackerSection';
 import { CertificationsSection } from '@/components/CertificationsSection';
 import { JourneySection } from '@/components/JourneySection';
 import { ContactSection } from '@/components/ContactSection';
+import { AboutMeSection } from '@/components/AboutMeSection';
 
 const Index = () => {
   return (
