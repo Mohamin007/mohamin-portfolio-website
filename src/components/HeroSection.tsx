@@ -46,26 +46,13 @@ export const HeroSection = () => {
             className="relative flex justify-center items-center"
             style={{ height: '80vh' }}
           >
-            {/* Radial glow behind figure */}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <div className="entity-glow-pulse rounded-full" style={{
-                width: '70%',
-                height: '70%',
-                background: 'radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 40%, transparent 70%)',
-                filter: 'blur(40px)',
-              }} />
-            </div>
-
             <img
               src={cosmicFigure}
               alt="Cosmic Entity"
               className="relative z-10 h-[85vh] w-auto max-w-none object-contain entity-glow-pulse-subtle"
               style={{
                 mixBlendMode: 'screen',
-                background: 'none',
-                border: 'none',
-                boxShadow: 'none',
-                filter: 'brightness(1.2) contrast(1.1) drop-shadow(0 0 40px rgba(255,255,255,0.8)) drop-shadow(0 0 80px rgba(255,255,255,0.4)) drop-shadow(0 0 120px rgba(255,255,255,0.2))',
+                filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.5)) drop-shadow(0 0 50px rgba(255,255,255,0.25))',
               }}
             />
           </motion.div>
