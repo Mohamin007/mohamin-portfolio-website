@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { Send, Linkedin, Github } from 'lucide-react';
+import { Send, Linkedin, Github, Mail, Instagram } from 'lucide-react';
 
 export const ContactSection = () => {
   const ref = useRef(null);
