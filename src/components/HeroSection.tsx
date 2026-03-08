@@ -88,6 +88,9 @@ export const HeroSection = () => {
               <span className="inline-block mr-3">·</span>
               <span className="inline-block">2025–2030</span>
             </div>
+            <p className="mt-6 text-sm italic text-muted-foreground/60 text-right glow-text-subtle">
+              — Mohamin
+            </p>
           </motion.div>
         </div>
       </div>

@@ -30,7 +30,12 @@ export const Navbar = () => {
     setTheme(themes[nextIndex]);
   };
 
-  const navLinks = ['About', 'Skills', 'Projects', 'Tracker', 'Journey', 'Contact'];
+  const navLinks = ['About', 'Skills', 'Projects', 'Arsenal', 'Journey', 'Contact'];
+
+  const getLinkHref = (link: string) => {
+    if (link === 'Arsenal') return '#tracker';
+    return `#${link.toLowerCase()}`;
+  };
 
   return (
     <motion.nav
@@ -52,7 +57,7 @@ export const Navbar = () => {
           {navLinks.map((link) => (
             <a
               key={link}
-              href={`#${link.toLowerCase()}`}
+              href={getLinkHref(link)}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 hover:glow-text-subtle"
             >
               {link}
