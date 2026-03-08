@@ -62,6 +62,7 @@ export default {
       },
       fontFamily: {
         heading: ['Space Grotesk', 'sans-serif'],
+        display: ['Fjalla One', 'sans-serif'],
         body: ['Inter', 'sans-serif'],
       },
       borderRadius: {
