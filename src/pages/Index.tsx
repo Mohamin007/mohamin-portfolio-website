@@ -1,5 +1,6 @@
 import { Navbar } from '@/components/Navbar';
 import { ParticleField } from '@/components/ParticleField';
+import { GlobalHoverParticles } from '@/components/GlobalHoverParticles';
 import { HeroSection } from '@/components/HeroSection';
 import { SkillsSection } from '@/components/SkillsSection';
 import { ProjectsSection } from '@/components/ProjectsSection';
@@ -14,7 +15,7 @@ const Index = () => {
     <div className="min-h-screen bg-background relative overflow-x-hidden">
       {/* Particle Background */}
       <ParticleField />
-      
+      <GlobalHoverParticles />
       {/* Navigation */}
       <Navbar />
       
