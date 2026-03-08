@@ -15,7 +15,7 @@ const Index = () => {
     <div className="min-h-screen bg-background relative overflow-x-hidden">
       {/* Particle Background */}
       <ParticleField />
-      
+      <GlobalHoverParticles />
       {/* Navigation */}
       <Navbar />
       
