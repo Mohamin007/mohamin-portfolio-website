@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { TypewriterText } from './TypewriterText';
-import cosmicFigure from '@/assets/cosmic-figure.png';
+import cosmicFigure from '@/assets/cosmic-entity.jpg';
 
 export const HeroSection = () => {
   return (
