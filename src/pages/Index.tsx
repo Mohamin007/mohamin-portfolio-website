@@ -26,6 +26,7 @@ const Index = () => {
         <TrackerSection />
         <CertificationsSection />
         <JourneySection />
+        <AboutMeSection />
         <ContactSection />
       </main>
 
