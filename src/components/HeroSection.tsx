@@ -9,6 +9,7 @@ export const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ backgroundColor: '#000000' }}>
       {/* Watermark Background Text */}
       <div className="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none">
+        <WatermarkDust />
         <span className="watermark-text whitespace-nowrap">MOHAMIN</span>
       </div>
 
