@@ -1,12 +1,37 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Navbar } from '@/components/Navbar';
+import { ParticleField } from '@/components/ParticleField';
+import { HeroSection } from '@/components/HeroSection';
+import { SkillsSection } from '@/components/SkillsSection';
+import { ProjectsSection } from '@/components/ProjectsSection';
+import { TrackerSection } from '@/components/TrackerSection';
+import { CertificationsSection } from '@/components/CertificationsSection';
+import { JourneySection } from '@/components/JourneySection';
+import { ContactSection } from '@/components/ContactSection';
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background relative overflow-x-hidden">
+      {/* Particle Background */}
+      <ParticleField />
+      
+      {/* Navigation */}
+      <Navbar />
+      
+      {/* Main Content */}
+      <main className="relative z-10">
+        <HeroSection />
+        <SkillsSection />
+        <ProjectsSection />
+        <TrackerSection />
+        <CertificationsSection />
+        <JourneySection />
+        <ContactSection />
+      </main>
+
+      {/* Footer */}
+      <footer className="relative z-10 py-8 text-center text-muted-foreground/50 text-sm border-t border-foreground/5">
+        <p>© 2025 Mohamin Mir. Crafted in the cosmos.</p>
+      </footer>
     </div>
   );
 };
