@@ -37,8 +37,7 @@ export const HeroSection = () => {
               </a>
               <a href="#contact" className="hero-btn text-center">
                 Let's Connect
-              </a>
-              </a>
+            </div>
             </div>
           </motion.div>
 
