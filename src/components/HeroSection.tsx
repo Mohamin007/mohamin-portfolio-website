@@ -6,7 +6,7 @@ import cosmicFigure from '@/assets/cosmic-entity.png';
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ backgroundColor: '#000000' }}>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden hero-force-dark" style={{ backgroundColor: '#000000' }}>
       {/* Watermark Background Text */}
       <div className="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none">
         <WatermarkDust />
