@@ -89,15 +89,18 @@ export const ProjectsSection = () => {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.8, delay: 1 }}
-          className="text-center mt-12"
+          className="text-center mt-12 space-y-6"
         >
+          <p className="text-muted-foreground italic glow-text-subtle text-sm">
+            These are just the highlights. More projects are being built and pushed to GitHub regularly.
+          </p>
           <a
             href="https://github.com/Mohamin007"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-cosmic inline-flex items-center gap-2"
           >
-            <span>github.com/Mohamin007</span>
+            <span>View All Projects on GitHub</span>
             <ExternalLink className="w-4 h-4" />
           </a>
         </motion.div>

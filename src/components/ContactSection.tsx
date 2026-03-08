@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { Send, Linkedin, Github } from 'lucide-react';
+import { Send, Linkedin, Github, Mail, Instagram } from 'lucide-react';
 
 export const ContactSection = () => {
   const ref = useRef(null);
@@ -45,9 +45,7 @@ export const ContactSection = () => {
             >
               <Linkedin className="w-8 h-8 text-muted-foreground group-hover:text-foreground transition-colors" />
               <div>
-                <p className="font-heading font-semibold group-hover:glow-text-subtle transition-all">
-                  LinkedIn
-                </p>
+                <p className="font-heading font-semibold group-hover:glow-text-subtle transition-all">LinkedIn</p>
                 <p className="text-sm text-muted-foreground">linkedin.com/in/moham7n</p>
               </div>
             </a>
@@ -60,10 +58,32 @@ export const ContactSection = () => {
             >
               <Github className="w-8 h-8 text-muted-foreground group-hover:text-foreground transition-colors" />
               <div>
-                <p className="font-heading font-semibold group-hover:glow-text-subtle transition-all">
-                  GitHub
-                </p>
+                <p className="font-heading font-semibold group-hover:glow-text-subtle transition-all">GitHub</p>
                 <p className="text-sm text-muted-foreground">github.com/Mohamin007</p>
+              </div>
+            </a>
+
+            <a
+              href="mailto:myselfmohamin@gmail.com"
+              className="glass-card-glow p-6 flex items-center gap-4 group"
+            >
+              <Mail className="w-8 h-8 text-muted-foreground group-hover:text-foreground transition-colors" />
+              <div>
+                <p className="font-heading font-semibold group-hover:glow-text-subtle transition-all">Email</p>
+                <p className="text-sm text-muted-foreground">myselfmohamin@gmail.com</p>
+              </div>
+            </a>
+
+            <a
+              href="https://instagram.com/mohamin.py"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass-card-glow p-6 flex items-center gap-4 group"
+            >
+              <Instagram className="w-8 h-8 text-muted-foreground group-hover:text-foreground transition-colors" />
+              <div>
+                <p className="font-heading font-semibold group-hover:glow-text-subtle transition-all">Instagram</p>
+                <p className="text-sm text-muted-foreground">mohamin.py</p>
               </div>
             </a>
           </motion.div>
