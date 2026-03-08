@@ -30,11 +30,17 @@ export const Navbar = () => {
     setTheme(themes[nextIndex]);
   };
 
-  const navLinks = ['About', 'Skills', 'Projects', 'Arsenal', 'Journey', 'Contact'];
+  const navLinks = ['Origin', 'Skills', 'Projects', 'Arsenal', 'Achievements', 'Journey', 'About', 'Connect'];
 
   const getLinkHref = (link: string) => {
-    if (link === 'Arsenal') return '#tracker';
-    return `#${link.toLowerCase()}`;
+    const map: Record<string, string> = {
+      Origin: '#about',
+      Arsenal: '#tracker',
+      Achievements: '#achievements',
+      About: '#about-me',
+      Connect: '#contact',
+    };
+    return map[link] || `#${link.toLowerCase()}`;
   };
 
   return (

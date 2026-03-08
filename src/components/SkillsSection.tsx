@@ -22,6 +22,7 @@ const categories: SkillCategory[] = [
       { name: 'C', level: 'Strong Foundation' },
       { name: 'Python', level: 'In Progress' },
       { name: 'R', level: 'Strong Foundation' },
+      { name: 'LaTeX', level: 'Strong Foundation' },
     ],
   },
   {
@@ -30,6 +31,9 @@ const categories: SkillCategory[] = [
       { name: 'Git', level: 'Exploring' },
       { name: 'GitHub', level: 'Exploring' },
       { name: 'Arduino', level: 'Exploring' },
+      { name: 'VS Code', level: 'Exploring' },
+      { name: 'PyCharm', level: 'Exploring' },
+      { name: 'Jupyter', level: 'Exploring' },
     ],
   },
   {
@@ -47,6 +51,7 @@ const categories: SkillCategory[] = [
     skills: [
       { name: 'Advanced Python', level: 'In Progress' },
       { name: 'Data Science Fundamentals', level: 'Exploring' },
+      { name: 'Computer Networks', level: 'Exploring' },
     ],
   },
 ];
