@@ -26,7 +26,7 @@ export const CertificationsSection = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section className="py-32 relative" ref={ref}>
+    <section id="achievements" className="py-32 relative" ref={ref}>
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
