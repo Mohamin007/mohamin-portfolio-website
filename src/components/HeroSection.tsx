@@ -49,13 +49,12 @@ export const HeroSection = () => {
             <img
               src={cosmicFigure}
               alt="Cosmic Entity"
-              className="relative z-10 object-contain entity-glow-pulse-subtle"
+              className="relative z-10 object-contain"
               style={{
-                height: '110vh',
+                height: '140vh',
                 width: 'auto',
                 maxWidth: 'none',
                 mixBlendMode: 'screen',
-                filter: 'drop-shadow(0 0 25px rgba(255,255,255,0.9)) drop-shadow(0 0 60px rgba(255,255,255,0.5)) drop-shadow(0 0 100px rgba(255,255,255,0.2))',
               }}
             />
           </motion.div>
