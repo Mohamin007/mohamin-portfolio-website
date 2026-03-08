@@ -32,11 +32,12 @@ export const HeroSection = () => {
               />
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#projects" className="btn-cosmic text-center">
+              <a href="#projects" className="hero-btn text-center">
                 View My Work
               </a>
-              <a href="#contact" className="btn-cosmic text-center">
+              <a href="#contact" className="hero-btn text-center">
                 Let's Connect
+              </a>
               </a>
             </div>
           </motion.div>
