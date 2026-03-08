@@ -45,21 +45,25 @@ export const HeroSection = () => {
             transition={{ duration: 1.2, delay: 0.2, ease: 'easeOut' }}
             className="relative flex justify-center"
           >
-            <div className="relative w-[28rem] h-[700px] md:w-[36rem] md:h-[850px]" style={{ backgroundColor: '#050508' }}>
-              {/* Glow effect behind figure */}
-              <div className="absolute inset-0 bg-gradient-radial from-foreground/10 via-transparent to-transparent blur-3xl scale-150" />
+            <div className="relative flex items-center justify-center" style={{ height: '80vh' }}>
+              {/* Radial glow behind figure */}
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div className="entity-glow-pulse rounded-full" style={{
+                  width: '70%',
+                  height: '70%',
+                  background: 'radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 40%, transparent 70%)',
+                  filter: 'blur(40px)',
+                }} />
+              </div>
               
               {/* The cosmic figure image */}
               <img
                 src={cosmicFigure}
                 alt="Cosmic Entity"
-                className="w-full h-full object-cover object-top"
+                className="relative z-10 h-[75vh] w-auto max-w-none object-contain entity-glow-pulse-subtle"
                 style={{
                   mixBlendMode: 'screen',
-                  maskImage: 'radial-gradient(ellipse 85% 75% at 50% 40%, black 35%, transparent 70%)',
-                  WebkitMaskImage: 'radial-gradient(ellipse 85% 75% at 50% 40%, black 35%, transparent 70%)',
-                  filter: 'brightness(1.1) contrast(1.3)',
-                  backgroundColor: '#050508',
+                  filter: 'brightness(1.2) contrast(1.1) drop-shadow(0 0 40px rgba(255,255,255,0.8)) drop-shadow(0 0 80px rgba(255,255,255,0.4)) drop-shadow(0 0 120px rgba(255,255,255,0.2))',
                 }}
               />
             </div>
