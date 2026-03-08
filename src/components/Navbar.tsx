@@ -57,7 +57,7 @@ export const Navbar = () => {
           {navLinks.map((link) => (
             <a
               key={link}
-              href={`#${link.toLowerCase()}`}
+              href={getLinkHref(link)}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 hover:glow-text-subtle"
             >
               {link}
