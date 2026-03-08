@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Fjalla+One&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -219,8 +219,9 @@
 
   .watermark-text {
     @apply absolute text-[20vw] font-bold tracking-tight pointer-events-none select-none;
-    font-family: 'Space Grotesk', sans-serif;
-    color: hsl(var(--foreground) / 0.06);
+    font-family: 'Fjalla One', sans-serif;
+    color: hsl(45 30% 85% / 0.07);
+    text-shadow: 0 0 60px hsl(45 40% 70% / 0.08), 0 0 120px hsl(45 30% 60% / 0.04);
   }
 }
 

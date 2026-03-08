@@ -19,7 +19,7 @@ export const HeroSection = () => {
             transition={{ duration: 1, delay: 0.5 }}
             className="text-left"
           >
-            <h1 className="text-5xl md:text-7xl font-heading font-bold mb-6 glow-text leading-tight">
+            <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 glow-text leading-tight uppercase">
               Mohamin<br />Mir
             </h1>
             <div className="text-xl md:text-2xl text-muted-foreground mb-8 h-8">
@@ -45,7 +45,7 @@ export const HeroSection = () => {
             transition={{ duration: 1.2, delay: 0.2, ease: 'easeOut' }}
             className="relative flex justify-center"
           >
-            <div className="relative w-80 h-[500px] md:w-96 md:h-[600px]">
+            <div className="relative w-[28rem] h-[700px] md:w-[36rem] md:h-[850px]">
               {/* Glow effect behind figure */}
               <div className="absolute inset-0 bg-gradient-radial from-foreground/10 via-transparent to-transparent blur-3xl scale-150" />
               
@@ -53,15 +53,14 @@ export const HeroSection = () => {
               <img
                 src={cosmicFigure}
                 alt="Cosmic Entity"
-                className="w-full h-full object-cover object-top rounded-lg"
+                className="w-full h-full object-cover object-top"
                 style={{
-                  maskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)',
-                  WebkitMaskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)',
+                  mixBlendMode: 'screen',
+                  maskImage: 'radial-gradient(ellipse 80% 70% at 50% 40%, black 40%, transparent 75%)',
+                  WebkitMaskImage: 'radial-gradient(ellipse 80% 70% at 50% 40%, black 40%, transparent 75%)',
+                  filter: 'brightness(1.1) contrast(1.2)',
                 }}
               />
-              
-              {/* Additional glow overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
             </div>
           </motion.div>
 
