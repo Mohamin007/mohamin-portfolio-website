@@ -220,8 +220,9 @@
   .watermark-text {
     @apply absolute text-[20vw] font-bold tracking-tight pointer-events-none select-none;
     font-family: 'Fjalla One', sans-serif;
-    color: hsl(45 30% 85% / 0.07);
-    text-shadow: 0 0 60px hsl(45 40% 70% / 0.08), 0 0 120px hsl(45 30% 60% / 0.04);
+    color: rgba(255, 255, 255, 0.07);
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.05);
+    text-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
   }
 }
 
