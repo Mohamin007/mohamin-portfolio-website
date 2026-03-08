@@ -44,7 +44,7 @@ export const Navbar = () => {
       <div className="container mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="text-2xl font-heading font-bold glow-text-subtle">
-          MM
+          MOHAM7N
         </a>
 
         {/* Nav Links */}
