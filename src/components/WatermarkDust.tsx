@@ -45,7 +45,7 @@ export const WatermarkDust = () => {
       const maxLife = 200 + Math.random() * 300;
 
       const sizeRoll = Math.random();
-      const size = sizeRoll < 0.7 ? Math.random() * 0.8 + 0.2 : sizeRoll < 0.92 ? Math.random() * 1.2 + 0.6 : Math.random() * 1.8 + 1;
+      const size = sizeRoll < 0.5 ? Math.random() * 1.2 + 0.5 : sizeRoll < 0.85 ? Math.random() * 1.8 + 1 : Math.random() * 2.5 + 1.5;
 
       return {
         x,
@@ -56,11 +56,11 @@ export const WatermarkDust = () => {
         opacity: 0,
         life: 0,
         maxLife,
-        brightness: 0.5 + Math.random() * 0.3,
+        brightness: 0.65 + Math.random() * 0.35,
       };
     };
 
-    const PARTICLE_COUNT = 65;
+    const PARTICLE_COUNT = 200;
     for (let i = 0; i < PARTICLE_COUNT; i++) {
       const p = spawnParticle();
       p.life = Math.random() * p.maxLife;
