@@ -36,7 +36,8 @@ export const Navbar = () => {
     const map: Record<string, string> = {
       Origin: '#about',
       Arsenal: '#tracker',
-      Achievements: '#certifications',
+      Achievements: '#achievements',
+      About: '#about-me',
       Connect: '#contact',
     };
     return map[link] || `#${link.toLowerCase()}`;
