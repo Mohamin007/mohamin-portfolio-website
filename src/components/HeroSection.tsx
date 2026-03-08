@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 import { TypewriterText } from './TypewriterText';
-import cosmicFigure from '@/assets/cosmic-figure.jpg';
+import cosmicFigure from '@/assets/cosmic-figure.png';
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ backgroundColor: '#050508' }}>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ backgroundColor: '#000000' }}>
       {/* Watermark Background Text */}
       <div className="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none">
         <span className="watermark-text whitespace-nowrap">MOHAMIN</span>
