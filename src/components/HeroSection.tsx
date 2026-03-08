@@ -44,15 +44,15 @@ export const HeroSection = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 1.2, delay: 0.2, ease: 'easeOut' }}
             className="relative flex justify-center items-center"
-            style={{ height: '80vh' }}
+            style={{ height: '100vh' }}
           >
             <img
               src={cosmicFigure}
               alt="Cosmic Entity"
-              className="relative z-10 h-[85vh] w-auto max-w-none object-contain entity-glow-pulse-subtle"
+              className="relative z-10 h-[100vh] w-auto object-contain entity-glow-pulse-subtle"
               style={{
                 mixBlendMode: 'screen',
-                filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.5)) drop-shadow(0 0 50px rgba(255,255,255,0.25))',
+                filter: 'drop-shadow(0 0 25px rgba(255,255,255,0.9)) drop-shadow(0 0 60px rgba(255,255,255,0.5)) drop-shadow(0 0 100px rgba(255,255,255,0.2))',
               }}
             />
           </motion.div>
