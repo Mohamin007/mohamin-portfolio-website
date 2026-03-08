@@ -4,7 +4,7 @@ import cosmicFigure from '@/assets/cosmic-figure.jpg';
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ backgroundColor: '#050508' }}>
       {/* Watermark Background Text */}
       <div className="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none">
         <span className="watermark-text whitespace-nowrap">MOHAMIN</span>
@@ -45,7 +45,7 @@ export const HeroSection = () => {
             transition={{ duration: 1.2, delay: 0.2, ease: 'easeOut' }}
             className="relative flex justify-center"
           >
-            <div className="relative w-[28rem] h-[700px] md:w-[36rem] md:h-[850px]">
+            <div className="relative w-[28rem] h-[700px] md:w-[36rem] md:h-[850px]" style={{ backgroundColor: '#050508' }}>
               {/* Glow effect behind figure */}
               <div className="absolute inset-0 bg-gradient-radial from-foreground/10 via-transparent to-transparent blur-3xl scale-150" />
               
@@ -56,9 +56,10 @@ export const HeroSection = () => {
                 className="w-full h-full object-cover object-top"
                 style={{
                   mixBlendMode: 'screen',
-                  maskImage: 'radial-gradient(ellipse 80% 70% at 50% 40%, black 40%, transparent 75%)',
-                  WebkitMaskImage: 'radial-gradient(ellipse 80% 70% at 50% 40%, black 40%, transparent 75%)',
-                  filter: 'brightness(1.1) contrast(1.2)',
+                  maskImage: 'radial-gradient(ellipse 85% 75% at 50% 40%, black 35%, transparent 70%)',
+                  WebkitMaskImage: 'radial-gradient(ellipse 85% 75% at 50% 40%, black 35%, transparent 70%)',
+                  filter: 'brightness(1.1) contrast(1.3)',
+                  backgroundColor: '#050508',
                 }}
               />
             </div>
