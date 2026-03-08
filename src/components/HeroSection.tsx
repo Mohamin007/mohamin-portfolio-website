@@ -43,14 +43,17 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 100, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 1.2, delay: 0.2, ease: 'easeOut' }}
-            className="relative flex justify-center items-center"
+            className="relative flex justify-center items-center overflow-visible"
             style={{ height: '100vh' }}
           >
             <img
               src={cosmicFigure}
               alt="Cosmic Entity"
-              className="relative z-10 h-[100vh] w-auto object-contain entity-glow-pulse-subtle"
+              className="relative z-10 object-contain entity-glow-pulse-subtle"
               style={{
+                height: '110vh',
+                width: 'auto',
+                maxWidth: 'none',
                 mixBlendMode: 'screen',
                 filter: 'drop-shadow(0 0 25px rgba(255,255,255,0.9)) drop-shadow(0 0 60px rgba(255,255,255,0.5)) drop-shadow(0 0 100px rgba(255,255,255,0.2))',
               }}
