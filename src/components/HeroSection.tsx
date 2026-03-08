@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { TypewriterText } from './TypewriterText';
 import { CosmicDust } from './CosmicDust';
+import { WatermarkDust } from './WatermarkDust';
 import cosmicFigure from '@/assets/cosmic-entity.png';
 
 export const HeroSection = () => {
