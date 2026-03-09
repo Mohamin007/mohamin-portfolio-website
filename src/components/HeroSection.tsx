@@ -8,7 +8,7 @@ export const HeroSection = () => {
   return (
     <section id="about" className="relative min-h-screen flex items-center justify-center overflow-hidden hero-force-dark" style={{ backgroundColor: '#000000' }}>
       {/* Watermark Background Text */}
-      <div className="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none" style={{ transform: 'translateY(-10%)' }}>
         <WatermarkDust />
         <span className="watermark-text whitespace-nowrap">MOHAMIN</span>
       </div>
