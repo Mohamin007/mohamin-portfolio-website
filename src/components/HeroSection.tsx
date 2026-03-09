@@ -15,17 +15,17 @@ export const HeroSection = () => {
 
       <div className="container mx-auto px-4 sm:px-6 py-12 lg:py-20 relative z-10">
         {/* Mobile Layout */}
-        <div className="flex flex-col lg:hidden items-center text-center min-h-[90vh] justify-center gap-6">
+        <div className="flex flex-col lg:hidden items-center text-center justify-center gap-4 pb-20">
           {/* Name */}
           <motion.div
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            <h1 className="text-4xl sm:text-5xl font-display font-bold mb-4 glow-text leading-tight uppercase">
+            <h1 className="text-4xl sm:text-5xl font-display font-bold mb-2 glow-text leading-tight uppercase">
               Mohamin<br />Mir
             </h1>
-            <div className="text-lg sm:text-xl text-muted-foreground mb-6 h-6">
+            <div className="text-lg sm:text-xl text-muted-foreground mb-2 h-6">
               <TypewriterText 
                 text="Engineer in the Making. Watch This Space." 
                 delay={60}
@@ -39,7 +39,7 @@ export const HeroSection = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, delay: 0.2, ease: 'easeOut' }}
             className="relative flex justify-center items-center w-full"
-            style={{ height: '40vh' }}
+            style={{ height: '55vh' }}
           >
             <CosmicDust />
             <img
@@ -47,7 +47,7 @@ export const HeroSection = () => {
               alt="Cosmic Entity"
               className="relative z-10 object-contain max-h-full"
               style={{
-                height: '50vh',
+                height: '65vh',
                 width: 'auto',
                 maxWidth: '100%',
                 mixBlendMode: 'screen',
@@ -76,7 +76,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="mt-4 px-2"
+            className="mt-2 px-2"
           >
             <span className="section-label mb-3 block">About</span>
             <p className="text-muted-foreground leading-relaxed text-sm">
