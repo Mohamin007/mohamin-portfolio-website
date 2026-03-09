@@ -42,18 +42,24 @@ export const HeroSection = () => {
             style={{ height: '55vh' }}
           >
             <CosmicDust />
-            <img
-              src={cosmicFigure}
-              alt="Cosmic Entity"
-              className="relative z-10 object-contain max-h-full"
-              style={{
-                height: '65vh',
-                width: 'auto',
-                maxWidth: '100%',
-                mixBlendMode: 'screen',
-                filter: 'brightness(1.4) contrast(1.5) saturate(1.1) drop-shadow(0 0 15px rgba(255,255,255,0.9)) drop-shadow(0 0 30px rgba(255,255,255,0.6))',
-              }}
-            />
+            <div className="relative z-10" style={{ height: '65vh', width: 'auto' }}>
+              <img
+                src={cosmicFigure}
+                alt="Cosmic Entity"
+                className="object-contain h-full w-auto max-w-full"
+                style={{
+                  mixBlendMode: 'screen',
+                  filter: 'brightness(1.4) contrast(1.5) saturate(1.1) drop-shadow(0 0 15px rgba(255,255,255,0.9)) drop-shadow(0 0 30px rgba(255,255,255,0.6))',
+                }}
+              />
+              <div
+                className="absolute bottom-0 left-0 right-0 pointer-events-none"
+                style={{
+                  height: '40%',
+                  background: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,1) 100%)',
+                }}
+              />
+            </div>
           </motion.div>
 
           {/* Buttons - Mobile */}
