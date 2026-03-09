@@ -79,10 +79,13 @@ export const HeroSection = () => {
             className="mt-2 px-2"
           >
             <span className="section-label mb-3 block">About</span>
-            <p className="text-muted-foreground leading-relaxed text-sm">
-              Spent most of his time around machines — not because they're smarter, 
+            <p className="text-muted-foreground leading-relaxed text-sm italic">
+              "Spent most of my time around machines — not because they're smarter, 
               but because they are better. Master the craft well enough to build 
-              things that shouldn't exist yet.
+              things that shouldn't exist yet."
+            </p>
+            <p className="mt-3 text-sm text-muted-foreground/60 text-right glow-text-subtle italic">
+              — Mohamin
             </p>
           </motion.div>
         </div>
